@@ -1,0 +1,429 @@
+@import "tailwindcss";
+
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Luckiest+Guy&display=swap');
+
+@theme {
+  --color-brand-primary: #5c7cfa;
+  /* Tom Blue */
+  --color-brand-secondary: #ff922b;
+  /* Jerry Orange/Brown */
+  --color-brand-accent: #fab005;
+  /* Cheese Yellow */
+  --color-brand-success: #51cf66;
+
+  --font-cartoon: 'Luckiest Guy', cursive;
+  --font-header: 'Luckiest Guy', cursive;
+
+  --radius-xl: 0.75rem;
+  --radius-2xl: 1rem;
+  --radius-3xl: 1.5rem;
+  --radius-4xl: 2.5rem;
+}
+
+body.font-clean {
+  --font-cartoon: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-header: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: var(--font-cartoon) !important;
+}
+
+h1,
+h2,
+h3,
+.cartoon-font {
+  font-family: var(--font-cartoon);
+  letter-spacing: 0.05em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-image: url('https://images6.alphacoders.com/645/645000.jpg') !important;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  font-family: 'Luckiest Guy', cursive, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@media (min-width: 1024px) {
+  body {
+    overflow: hidden;
+  }
+}
+
+.body-character-tom {
+  position: fixed;
+  bottom: -60px;
+  right: 0;
+  width: 280px;
+  height: 280px;
+  background-image: url('https://pngimg.com/uploads/tom_and_jerry/tom_and_jerry_PNG24.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 2000;
+  opacity: 1;
+  pointer-events: none;
+  filter: drop-shadow(10px 10px 20px rgba(0, 0, 0, 0.2));
+}
+
+.body-character-jerry {
+  position: fixed;
+  bottom: 0;
+  left: -50px;
+  width: 380px;
+  height: 380px;
+  background-image: url('https://pngimg.com/uploads/tom_and_jerry/tom_and_jerry_PNG3.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 2000;
+  opacity: 1;
+  pointer-events: none;
+  filter: drop-shadow(8px 8px 15px rgba(0, 0, 0, 0.2));
+  transform: scaleX(1);
+}
+
+/* Precise Mobile Positioning */
+/* Precise Mobile Positioning */
+@media (max-width: 768px) {
+  .body-character-tom {
+    width: 120px;
+    height: 120px;
+    top: 60px;
+    /* Move to top on mobile */
+    right: -20px;
+    bottom: auto;
+    opacity: 0.6 !important;
+    z-index: 0 !important;
+    transform: rotate(10deg);
+  }
+
+  .body-character-jerry {
+    width: 80px;
+    height: 80px;
+    top: 70px;
+    /* Move to top on mobile */
+    left: -10px;
+    bottom: auto;
+    opacity: 0.6 !important;
+    z-index: 0 !important;
+  }
+
+  .glass {
+    border-radius: 1.5rem !important;
+    border-width: 2px !important;
+    box-shadow: 4px 4px 0px #000 !important;
+  }
+
+  .chalkboard {
+    padding: 1rem !important;
+    border-width: 4px !important;
+    border-radius: 1rem !important;
+  }
+
+  .paper-note {
+    padding: 1rem !important;
+    border-radius: 1rem !important;
+  }
+}
+
+/* Larger screens adjustments */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .body-character-tom {
+    width: 220px;
+    height: 220px;
+    bottom: 0;
+    right: 0;
+  }
+
+  .body-character-jerry {
+    width: 140px;
+    height: 140px;
+    bottom: 0;
+    left: 0;
+  }
+}
+
+.bangers-header {
+  font-family: var(--font-header);
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.45) !important;
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
+  border: 4px solid #000 !important;
+  box-shadow: 8px 8px 0px #000 !important;
+  position: relative;
+  z-index: 100;
+  border-radius: 2.5rem !important;
+}
+
+.card-shadow {
+  box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.1);
+}
+
+.vibrant-gradient {
+  background: linear-gradient(135deg, #5c7cfa, #339af0);
+  border: 3px solid #000;
+  box-shadow: 4px 4px 0px #000;
+}
+
+.jerry-gradient {
+  background: linear-gradient(135deg, #ff922b, #fd7e14);
+  border: 3px solid #000;
+  box-shadow: 4px 4px 0px #000;
+}
+
+.cheese-gradient {
+  background: linear-gradient(135deg, #fab005, #fcc419);
+  border: 3px solid #000;
+  box-shadow: 4px 4px 0px #000;
+}
+
+.board-border {
+  border: 6px solid #4a3728;
+  /* Wooden board look */
+  border-radius: 2rem;
+}
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0) rotate(0);
+  }
+
+  50% {
+    transform: translateY(-15px) rotate(2deg);
+  }
+}
+
+
+
+.comic-button {
+  transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.comic-button:hover {
+  transform: translate(-4px, -4px);
+  box-shadow: 12px 12px 0px #000;
+}
+
+.comic-button:active {
+  transform: translate(2px, 2px);
+  box-shadow: 4px 4px 0px #000;
+}
+
+/* Aggressive Transparency Fix */
+.clean-image {
+  mix-blend-mode: multiply;
+  filter: contrast(1.5) brightness(1.1);
+  object-fit: contain;
+  isolation: isolate;
+  display: inline-block;
+}
+
+.checkbox-comic {
+  appearance: none;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 4px solid black;
+  border-radius: 0.75rem;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.2s;
+  background: white;
+  box-shadow: 4px 4px 0px black;
+}
+
+.checkbox-comic:checked {
+  background: #ffc107;
+}
+
+.checkbox-comic:checked::after {
+  content: '✓';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: black;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Cartoon Footer Styling */
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #deb887;
+  /* Wood Color */
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+  background-size: 20px 20px;
+  border-top: 6px solid #8b4513;
+  /* Dark Wood Border */
+  padding: 0.75rem 1rem 1.5rem;
+  z-index: 1000;
+  box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 2rem 2rem 0 0;
+}
+
+.bottom-nav::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: 10%;
+  right: 10%;
+  height: 10px;
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 50%;
+  filter: blur(10px);
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+.ordered-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.nav-tab {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+  color: #5d4037;
+  font-family: 'Luckiest Guy', cursive;
+  font-size: 0.75rem;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  padding: 0.5rem;
+  border-radius: 1.5rem;
+  min-width: 64px;
+}
+
+.nav-tab.active {
+  color: white;
+  transform: translateY(-10px) scale(1.1);
+  background: rgba(255, 255, 255, 0.2);
+  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.2);
+}
+
+.nav-tab.active .icon-container {
+  background: #ffc107;
+  color: black;
+  box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.1);
+}
+
+.icon-container {
+  padding: 0.75rem;
+  border-radius: 1rem;
+  border: 3px solid black;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+/* Chalkboard Style */
+.chalkboard {
+  background: rgba(45, 74, 62, 0.6) !important;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border: 8px solid #8b4513;
+  border-radius: 2rem !important;
+  box-shadow: 0 10px 0 #5d2e0d;
+  padding: 2rem;
+  position: relative;
+}
+
+.chalkboard::after {
+  content: '';
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 10px;
+  background: white;
+  border-radius: 4px;
+  box-shadow: 0 4px 0 rgba(0, 0, 0, 0.1);
+}
+
+/* Paper Note Style */
+.paper-note {
+  background: rgba(255, 255, 255, 0.6) !important;
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  border-left: 8px solid #5c7cfa;
+  border-radius: 1.5rem !important;
+  padding: 1.5rem;
+  box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.05);
+  position: relative;
+}
+
+.paper-note::before {
+  content: '';
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 15px;
+  background: rgba(0, 0, 0, 0.1);
+  -webkit-mask: radial-gradient(circle, transparent 20%, black 21%);
+  mask: radial-gradient(circle, transparent 20%, black 21%);
+  background-color: #ff5252;
+  /* Red Pin head */
+  border-radius: 50%;
+}
+
+.paper-note:hover {
+  transform: scale(1.02);
+  z-index: 10;
+}
+
+.view-transition {
+  padding-bottom: 7rem;
+  /* Space for fixed bottom nav */
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f3f5;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ced4da;
+  border-radius: 10px;
+  border: 3px solid #f1f3f5;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #adb5bd;
+  animation: float 3s ease-in-out infinite;
+}
